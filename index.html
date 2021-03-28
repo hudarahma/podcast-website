@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>LogIn</title>
-    <script src="/js/login.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
-
+    
     <div class="wrapper">
         <div class="logo">
             <img src="/assets/desktop/logo.svg" alt="logo"/>
         </div>
         <section id="intro">
-            <h1>Login</h1>
-            <p>Login To Search Podcasts</p>
+            <h1>Discover New Podcasts</h1>
+            <p>Search for your next favorite Podcast.</p>
       
-            <form id="singup">
-              <!-- <input type="email" name="email" placeholder="Username"/>
-              <input type="password" name="password" placeholder="password"/> -->
-              <button id='login' type="submit">Login</button>
+            <form id="search">
+              <input id="searchText" type="genre" name="genre" placeholder="Genre"/>
+              <div id="search-results"></div>
+           
+                <div id="results-container" >
+                    <i id='prev' class="fas fa-chevron-left"></i>
+                   
+                    <div class="results" > 
+                        <img src='/assets/img4.png'/>
+                        <span>title</span>
+                        <span>Genre</span>
+                        <button id='listen-btn' type="submit">Listen</button>    
+                    </div>
+
+                   
+                    <i id='next' class="fas fa-chevron-right"></i>
+                </div>
             </form>
-            <!-- <div id="show-message" >Oops! wrong password</div> -->
       
             <div class="img-podcasts">
               <img src="/assets/desktop/spotify.svg" alt="podcasts" style="width: 96px;
@@ -45,5 +57,8 @@
         </section>
     </div>
     
+    <script src="/js/trie.js" ></script>
+    <script src="/js/dll.js"></script>
+    <script src="/js/index.js" ></script>
 </body>
 </html>
